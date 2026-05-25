@@ -1,0 +1,1053 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=yes"
+    />
+    <title>Bastion Safety Consulting | Workplace Safety Experts</title>
+    <meta
+      name="description"
+      content="Bastion Safety Consulting provides professional workplace safety training, audits, inspections, risk assessments, and compliance solutions based on real-world field experience."
+    />
+    <meta
+      name="keywords"
+      content="Safety Consulting, Workplace Safety Training, OSHA Safety Training, Safety Audits, Workplace Inspections, Risk Assessments, Industrial Safety Consulting, Construction Safety Training, Safety Compliance Services, Safety Policy Development"
+    />
+    <meta name="author" content="Bastion Safety Consulting" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Inter", sans-serif;
+        background-color: #ffffff;
+        color: #1e2a3e;
+        line-height: 1.5;
+        scroll-behavior: smooth;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Montserrat", sans-serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+      }
+
+      .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* glass & gradients */
+      .glass-card {
+        background: rgba(255, 255, 255, 0.96);
+        backdrop-filter: blur(0px);
+        border-radius: 28px;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+        transition: all 0.3s ease;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .glass-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 30px 40px -18px rgba(0, 0, 0, 0.15);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 14px 32px;
+        border-radius: 60px;
+        font-weight: 600;
+        font-size: 1rem;
+        transition: all 0.25s ease;
+        text-decoration: none;
+        cursor: pointer;
+        border: none;
+        font-family: "Inter", sans-serif;
+      }
+
+      .btn-primary {
+        background: #ff7a00;
+        color: #0d1b2a;
+        box-shadow: 0 8px 18px rgba(255, 122, 0, 0.25);
+      }
+
+      .btn-primary:hover {
+        background: #e56e00;
+        transform: scale(1.02);
+        box-shadow: 0 12px 22px rgba(255, 122, 0, 0.3);
+        color: #0d1b2a;
+      }
+
+      .btn-outline-light {
+        border: 2px solid rgba(255, 255, 255, 0.5);
+        background: transparent;
+        color: white;
+      }
+
+      .btn-outline-light:hover {
+        background: #ff7a00;
+        border-color: #ff7a00;
+        color: #0d1b2a;
+      }
+
+      /* header */
+      .navbar {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background: rgba(13, 27, 42, 0.92);
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+      }
+
+      .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 24px;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .logo a {
+        font-size: 1.8rem;
+        font-weight: 800;
+        font-family: "Montserrat", sans-serif;
+        color: white;
+        text-decoration: none;
+        letter-spacing: -0.02em;
+      }
+
+      .logo span {
+        color: #ff7a00;
+      }
+
+      .nav-links {
+        display: flex;
+        gap: 36px;
+        align-items: center;
+      }
+
+      .nav-links a {
+        text-decoration: none;
+        color: #f0f4fa;
+        font-weight: 500;
+        transition: 0.2s;
+        font-size: 1rem;
+      }
+
+      .nav-links a:hover {
+        color: #ff7a00;
+      }
+
+      .mobile-menu {
+        display: none;
+        font-size: 1.8rem;
+        color: white;
+        cursor: pointer;
+      }
+
+      @media (max-width: 900px) {
+        .nav-links {
+          display: none;
+        }
+        .mobile-menu {
+          display: block;
+        }
+        .nav-links.mobile-open {
+          display: flex;
+          flex-direction: column;
+          position: absolute;
+          top: 75px;
+          left: 0;
+          width: 100%;
+          background: #0d1b2a;
+          padding: 32px 24px;
+          gap: 28px;
+          backdrop-filter: blur(20px);
+          border-bottom: 1px solid #ff7a00;
+        }
+      }
+
+      /* hero */
+      .hero {
+        background: linear-gradient(135deg, #071221 0%, #0d1b2a 100%);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+        padding: 80px 0 100px;
+      }
+
+      .hero-badge {
+        color: #ff7a00;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        background: rgba(255, 122, 0, 0.12);
+        display: inline-block;
+        padding: 6px 14px;
+        border-radius: 60px;
+        margin-bottom: 24px;
+      }
+
+      .hero h1 {
+        font-size: 3.7rem;
+        line-height: 1.2;
+        margin-bottom: 24px;
+        color: white;
+      }
+
+      .hero p {
+        color: #cdd9f4;
+        font-size: 1.1rem;
+        margin-bottom: 32px;
+      }
+
+      .btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 18px;
+        margin-bottom: 32px;
+      }
+
+      .hero-stats {
+        display: flex;
+        gap: 32px;
+        margin-top: 24px;
+      }
+      .stat-item p:first-child {
+        font-weight: 800;
+        font-size: 1.4rem;
+        color: #ff7a00;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 32px;
+        box-shadow: 0 28px 42px -12px rgba(0, 0, 0, 0.5);
+        object-fit: cover;
+        height: auto;
+      }
+
+      /* section titles */
+      .section-title {
+        text-align: center;
+        margin-bottom: 56px;
+      }
+      .section-title h2 {
+        font-size: 2.6rem;
+        margin-bottom: 16px;
+      }
+      .section-tag {
+        color: #ff7a00;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 12px;
+        display: inline-block;
+        text-transform: uppercase;
+      }
+
+      .services-grid,
+      .process-grid,
+      .industries-grid,
+      .testimonial-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 32px;
+      }
+
+      .service-card {
+        padding: 32px 28px;
+        background: white;
+        border-radius: 28px;
+        transition: 0.2s;
+        border: 1px solid #eef2f8;
+      }
+      .service-icon {
+        font-size: 2.8rem;
+        color: #ff7a00;
+        margin-bottom: 24px;
+      }
+      .service-card h3 {
+        font-size: 1.6rem;
+        margin-bottom: 16px;
+      }
+      .feature-list {
+        list-style: none;
+        margin-top: 18px;
+      }
+      .feature-list li {
+        padding: 6px 0;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 0.9rem;
+      }
+      .feature-list i {
+        color: #ff7a00;
+        font-size: 0.8rem;
+      }
+
+      /* why choose */
+      .why-choose {
+        background: #f5f7fa;
+      }
+      .two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+        align-items: center;
+      }
+      .grid-features {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 24px;
+        margin-top: 32px;
+      }
+      .feat-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+      }
+      .feat-item i {
+        color: #ff7a00;
+        font-size: 1.4rem;
+      }
+
+      /* process steps */
+      .process-step {
+        background: white;
+        padding: 32px;
+        border-radius: 28px;
+        position: relative;
+        text-align: center;
+      }
+      .step-number {
+        background: #ff7a00;
+        width: 48px;
+        height: 48px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 60px;
+        color: #0d1b2a;
+        font-weight: 800;
+        font-size: 1.6rem;
+        margin: 0 auto 24px;
+      }
+
+      /* stats-bar */
+      .stats-section {
+        background: linear-gradient(100deg, #0d1b2a 0%, #132237 100%);
+        color: white;
+      }
+      .stats-row {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 40px;
+        text-align: center;
+        padding: 64px 0;
+      }
+      .stat-number {
+        font-size: 3rem;
+        font-weight: 800;
+        color: #ff7a00;
+      }
+
+      /* testimonial */
+      .testimonial-card {
+        background: white;
+        padding: 32px;
+        border-radius: 28px;
+      }
+      .testimonial-card i {
+        color: #ff7a00;
+        font-size: 2rem;
+        opacity: 0.6;
+        margin-bottom: 20px;
+        display: inline-block;
+      }
+
+      /* contact CTA */
+      .cta-section {
+        background: #0d1b2a;
+        text-align: center;
+        padding: 80px 24px;
+        border-radius: 48px;
+        margin: 48px auto;
+      }
+      .cta-section h2 {
+        color: white;
+      }
+
+      /* footer */
+      footer {
+        background: #07101c;
+        color: #b0c4de;
+        padding: 60px 0 30px;
+      }
+      .footer-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 48px;
+        margin-bottom: 48px;
+      }
+      .footer-col h4 {
+        color: white;
+        margin-bottom: 24px;
+      }
+      .footer-col a {
+        display: block;
+        color: #b0c4de;
+        text-decoration: none;
+        margin-bottom: 12px;
+        transition: 0.2s;
+      }
+      .footer-col a:hover {
+        color: #ff7a00;
+      }
+      .copyright {
+        text-align: center;
+        border-top: 1px solid #1f2e40;
+        padding-top: 32px;
+        font-size: 0.85rem;
+      }
+
+      @media (max-width: 800px) {
+        .hero-grid,
+        .two-column {
+          grid-template-columns: 1fr;
+        }
+        .hero h1 {
+          font-size: 2.4rem;
+        }
+        .section-title h2 {
+          font-size: 2rem;
+        }
+      }
+      button,
+      .btn,
+      a {
+        cursor: pointer;
+      }
+      .contact-form {
+        max-width: 600px;
+        margin: 0 auto;
+        background: white;
+        padding: 32px;
+        border-radius: 32px;
+      }
+      .form-group {
+        margin-bottom: 20px;
+      }
+      input,
+      textarea,
+      select {
+        width: 100%;
+        padding: 14px 18px;
+        border-radius: 40px;
+        border: 1px solid #ddd;
+        font-family: "Inter", sans-serif;
+      }
+      textarea {
+        border-radius: 24px;
+        resize: vertical;
+      }
+
+      /* ========= MARQUEE STYLES with 10vh height and icon width 30px ========= */
+      .marquee-wrapper {
+        overflow: hidden;
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
+        background: #ffffff;
+        padding: 0;
+        border-radius: 60px;
+        margin-bottom: 30px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+        height: 10vh;
+        display: flex;
+        align-items: center;
+      }
+      .marquee-content {
+        display: inline-block;
+        animation: marqueeScroll 28s linear infinite;
+        padding-left: 20px;
+      }
+      .marquee-content span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        margin-right: 48px;
+        font-weight: 600;
+        background: #f5f7fa;
+        padding: 6px 28px;
+        border-radius: 60px;
+        color: #0d1b2a;
+        font-size: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        transition: all 0.2s;
+      }
+      /* Set icon width to exactly 30px and maintain aspect */
+      .marquee-content span i {
+        width: 30px;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #ff7a00;
+        display: inline-block;
+      }
+      .marquee-content span:hover {
+        background: #ff7a00;
+        color: white;
+        transform: scale(1.02);
+      }
+      .marquee-content span:hover i {
+        color: white;
+      }
+      @keyframes marqueeScroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="navbar">
+      <div class="nav-container">
+        <div class="logo">
+          <a href="#">BASTION<span>SAFETY</span></a>
+        </div>
+        <div class="mobile-menu" id="mobileMenuBtn">
+          <i class="fas fa-bars"></i>
+        </div>
+        <div class="nav-links" id="navLinks">
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#process">Process</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Hero -->
+      <section class="hero" id="home">
+        <div class="container hero-grid">
+          <div>
+            <div class="hero-badge">
+              <i class="fas fa-hard-hat"></i> Real-World Experience
+            </div>
+            <h1>Building Safer Workplaces Through Real-World Experience</h1>
+            <p>
+              Professional safety consulting and training solutions designed to
+              educate employees, reduce workplace risks, and strengthen safety
+              culture through practical field knowledge.
+            </p>
+            <div class="btn-group">
+              <a href="#contact" class="btn btn-primary"
+                >Get Started <i class="fas fa-arrow-right"></i
+              ></a>
+              <a href="#services" class="btn btn-outline-light"
+                >Schedule a Consultation</a
+              >
+            </div>
+            <div class="hero-stats">
+              <div class="stat-item">
+                <p>100%</p>
+                <span>Safety-Focused</span>
+              </div>
+              <div class="stat-item">
+                <p>20+</p>
+                <span>Years Combined Exp.</span>
+              </div>
+              <div class="stat-item">
+                <p>ROCKY MTN</p>
+                <span>Regional Experts</span>
+              </div>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img
+              src="assets/images/Traning/890383ecf79fa9125c6d3503ee922eb3.jpg"
+              alt="Safety consultant on industrial site"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- About section -->
+      <section id="about" style="padding: 80px 0">
+        <div class="container">
+          <div class="two-column">
+            <div>
+              <span class="section-tag"
+                ><i class="fas fa-shield-alt"></i> ABOUT US</span
+              >
+              <h2 style="font-size: 2.2rem; margin-bottom: 24px">
+                About Bastion Safety Consulting
+              </h2>
+              <p style="margin-bottom: 20px">
+                Bastion Safety Consulting was founded with one mission — helping
+                businesses create safer, stronger, and more knowledgeable
+                workplaces. We believe safety training should go beyond
+                presentations and paperwork. Our approach combines real-world
+                field experience with modern training methods to ensure
+                employees fully understand workplace hazards, compliance
+                requirements, and safe work practices.
+              </p>
+              <p>
+                From safety audits and inspections to customized training
+                programs and risk assessments, we help companies build
+                confidence, reduce incidents, and maintain compliance with
+                current federal and state safety standards.
+              </p>
+              <div class="grid-features" style="margin-top: 32px">
+                <div class="feat-item">
+                  <i class="fas fa-check-circle"></i> Real Field Experience
+                </div>
+                <div class="feat-item">
+                  <i class="fas fa-check-circle"></i> Up-to-Date Safety
+                  Standards
+                </div>
+                <div class="feat-item">
+                  <i class="fas fa-check-circle"></i> Practical Learning
+                  Approaches
+                </div>
+                <div class="feat-item">
+                  <i class="fas fa-check-circle"></i> Customized Training
+                  Programs
+                </div>
+              </div>
+            </div>
+            <div>
+              <img
+                src="assets/images/Traning/d42f897bc3bfae8372f1b21ad841873a.jpg"
+                style="
+                  border-radius: 32px;
+                  width: 100%;
+                  height: 60vh;
+                  object-fit: cover;
+                "
+                alt="safety meeting"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services -->
+      <section id="services" style="background: #f5f7fa; padding: 80px 0">
+        <div class="container">
+          <div class="section-title">
+            <span class="section-tag">Our Services</span>
+            <h2>Comprehensive Workplace Safety Solutions</h2>
+            <p>
+              We provide modern safety consulting, inspections, audits, and
+              hands-on training programs tailored to your industry.
+            </p>
+          </div>
+          <div class="services-grid">
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-chalkboard-user"></i>
+              </div>
+              <h3>Professional Safety Training</h3>
+              <p>
+                Interactive in-person and video-based safety training programs
+                designed to improve employee knowledge and OSHA compliance.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-angle-right"></i> OSHA-Based Training</li>
+                <li><i class="fas fa-angle-right"></i> Construction Safety</li>
+                <li><i class="fas fa-angle-right"></i> Emergency Response</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-clipboard-list"></i>
+              </div>
+              <h3>Safety Audits & Compliance</h3>
+              <p>
+                Detailed workplace audits that identify safety gaps, improve
+                compliance, and help create safer working environments.
+              </p>
+              <ul class="feature-list">
+                <li>
+                  <i class="fas fa-angle-right"></i> Compliance Verification
+                </li>
+                <li>
+                  <i class="fas fa-angle-right"></i> Hazard Identification
+                </li>
+                <li><i class="fas fa-angle-right"></i> Actionable Reporting</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon">
+                <i class="fas fa-search-location"></i>
+              </div>
+              <h3>Workplace Inspections</h3>
+              <p>
+                Professional inspections designed to identify risks, improve
+                safety performance, and ensure safe operational practices.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-angle-right"></i> Job Site Inspections</li>
+                <li><i class="fas fa-angle-right"></i> PPE Compliance</li>
+                <li><i class="fas fa-angle-right"></i> Improvement Plans</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+              <h3>Risk Assessment & Analysis</h3>
+              <p>
+                Comprehensive risk analysis that helps businesses identify,
+                evaluate, and reduce workplace hazards before incidents occur.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-angle-right"></i> Hazard Assessments</li>
+                <li>
+                  <i class="fas fa-angle-right"></i> Prevention Strategies
+                </li>
+                <li><i class="fas fa-angle-right"></i> Corrective Guidance</li>
+              </ul>
+            </div>
+            <div class="service-card">
+              <div class="service-icon"><i class="fas fa-file-alt"></i></div>
+              <h3>Safety Policy Development</h3>
+              <p>
+                Creation and review of customized safety policies designed to
+                align with industry standards and operational requirements.
+              </p>
+              <ul class="feature-list">
+                <li><i class="fas fa-angle-right"></i> Safety Manuals</li>
+                <li><i class="fas fa-angle-right"></i> Compliance Updates</li>
+                <li><i class="fas fa-angle-right"></i> Program Improvements</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Us -->
+      <section class="why-choose" style="padding: 80px 0">
+        <div class="container two-column">
+          <div>
+            <img
+              src="assets/images/Traning/156c83ba654c8f2b091352a0a0c230fd.jpg"
+              style="border-radius: 32px; width: 100%"
+              alt="field work"
+            />
+          </div>
+          <div>
+            <span class="section-tag">Why Choose Us</span>
+            <h2 style="margin-bottom: 24px">
+              Why Companies Choose Bastion Safety Consulting
+            </h2>
+            <p>
+              We understand that effective safety training requires more than
+              basic instruction. Our experience-based approach helps employees
+              gain practical understanding, confidence, and long-term safety
+              awareness.
+            </p>
+            <div class="grid-features" style="margin-top: 28px">
+              <div class="feat-item">
+                <i class="fas fa-trophy"></i> Real-World Industry Experience
+              </div>
+              <div class="feat-item">
+                <i class="fas fa-graduation-cap"></i> Modern Training Approaches
+              </div>
+              <div class="feat-item">
+                <i class="fas fa-balance-scale"></i> Reliable Compliance
+                Guidance
+              </div>
+              <div class="feat-item">
+                <i class="fas fa-users"></i> Safety-Driven Culture
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section id="process" style="padding: 80px 0">
+        <div class="container">
+          <div class="section-title">
+            <span class="section-tag">Our Process</span>
+            <h2>Simple & Effective Approach</h2>
+          </div>
+          <div class="process-grid">
+            <div class="process-step">
+              <div class="step-number">1</div>
+              <h3>Consultation & Evaluation</h3>
+              <p>
+                We begin by understanding your workplace, operations, and safety
+                requirements.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">2</div>
+              <h3>Assessment & Planning</h3>
+              <p>
+                We identify hazards, review current procedures, and develop
+                tailored recommendations.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">3</div>
+              <h3>Training & Implementation</h3>
+              <p>
+                We deliver practical training and implement effective safety
+                solutions.
+              </p>
+            </div>
+            <div class="process-step">
+              <div class="step-number">4</div>
+              <h3>Ongoing Support</h3>
+              <p>
+                We continue supporting your organization with guidance, updates,
+                and compliance improvements.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Industries & Stats combined with MARQUEE - height 10vh, icon width 30px -->
+      <section style="background: #f5f7fa; padding: 80px 0">
+        <div class="container">
+          <div class="section-title">
+            <span class="section-tag">Industries We Serve</span>
+            <h2>Trusted Across Sectors</h2>
+          </div>
+
+          <!-- MARQUEE 1: industry sectors horizontal scrolling with 10vh height and icons width 30px -->
+          <div class="marquee-wrapper">
+            <div class="marquee-content">
+              <span><i class="fas fa-hard-hat"></i> Construction</span>
+              <span><i class="fas fa-industry"></i> Manufacturing</span>
+              <span><i class="fas fa-building"></i> Industrial Facilities</span>
+              <span><i class="fas fa-warehouse"></i> Warehousing</span>
+              <span><i class="fas fa-bolt"></i> Energy & Utilities</span>
+              <span><i class="fas fa-truck"></i> Transportation</span>
+              <span><i class="fas fa-chart-line"></i> Small Business</span>
+              <span><i class="fas fa-oil-can"></i> Oil & Gas</span>
+              <!-- Duplicate for seamless loop -->
+              <span><i class="fas fa-hard-hat"></i> Construction</span>
+              <span><i class="fas fa-industry"></i> Manufacturing</span>
+              <span><i class="fas fa-building"></i> Industrial Facilities</span>
+              <span><i class="fas fa-warehouse"></i> Warehousing</span>
+              <span><i class="fas fa-bolt"></i> Energy & Utilities</span>
+              <span><i class="fas fa-truck"></i> Transportation</span>
+              <span><i class="fas fa-chart-line"></i> Small Business</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+      <section style="padding: 80px 0">
+        <div class="container">
+          <div class="section-title">
+            <span class="section-tag">Testimonials</span>
+            <h2>What Clients Say</h2>
+          </div>
+          <div class="testimonial-grid">
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                “Bastion Safety Consulting provided detailed training that was
+                practical, engaging, and easy for our employees to understand.
+                Their field experience truly made the difference.”
+              </p>
+              <h4 style="margin-top: 20px">— Sarah T., Operations Director</h4>
+            </div>
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                “Their inspection and audit process helped us identify critical
+                safety gaps and improve workplace compliance quickly.”
+              </p>
+              <h4 style="margin-top: 20px">— Michael R., Safety Manager</h4>
+            </div>
+            <div class="testimonial-card">
+              <i class="fas fa-quote-left"></i>
+              <p>
+                “Professional, knowledgeable, and extremely thorough. Our team
+                gained confidence and a better understanding of workplace
+                safety.”
+              </p>
+              <h4 style="margin-top: 20px">— Jessica L., General Contractor</h4>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact + CTA combined -->
+      <section id="contact" style="padding: 40px 0 80px">
+        <div class="container">
+          <div class="cta-section">
+            <h2>Ready to Strengthen Your Workplace Safety?</h2>
+            <p style="color: #cdd9f4; max-width: 600px; margin: 20px auto">
+              Partner with Bastion Safety Consulting to build safer work
+              environments through practical training, detailed assessments, and
+              professional consulting solutions.
+            </p>
+            <div
+              class="btn-group"
+              style="justify-content: center; margin-top: 28px"
+            >
+              <a href="#contact-form" class="btn btn-primary" id="scrollToForm"
+                >Contact Us Today</a
+              >
+              <a href="tel:+13005551234" class="btn btn-outline-light"
+                >Call Now</a
+              >
+            </div>
+          </div>
+          <div id="contact-form" class="contact-form" style="margin-top: 40px">
+            <h3 style="text-align: center; margin-bottom: 24px">
+              Request a Consultation
+            </h3>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <input type="text" placeholder="Full Name" required />
+              </div>
+              <div class="form-group">
+                <input type="email" placeholder="Email Address" required />
+              </div>
+              <div class="form-group">
+                <input type="tel" placeholder="Phone Number" />
+              </div>
+              <div class="form-group">
+                <textarea
+                  rows="3"
+                  placeholder="Tell us about your safety needs..."
+                ></textarea>
+              </div>
+              <div style="text-align: center">
+                <button
+                  type="submit"
+                  class="btn btn-primary"
+                  style="background: #ff7a00"
+                >
+                  Send Message <i class="fas fa-paper-plane"></i>
+                </button>
+              </div>
+            </form>
+            <div
+              style="margin-top: 32px; text-align: center; font-size: 0.9rem"
+            >
+              <i class="fas fa-map-marker-alt"></i> Serving Rocky Mountain
+              Region & Beyond<br /><i class="fas fa-envelope"></i>
+              hello@bastionsafety.com | <i class="fas fa-phone"></i> (888)
+              554-1234
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-grid">
+        <div class="footer-col">
+          <h4>Bastion Safety</h4>
+          <p>
+            Professional safety consulting and training focused on education,
+            compliance, and real-world workplace safety.
+          </p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <a href="#home">Home</a><a href="#about">About</a
+          ><a href="#services">Services</a><a href="#process">Process</a
+          ><a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <a href="#">Safety Training</a><a href="#">Audits & Inspections</a
+          ><a href="#">Risk Assessments</a><a href="#">Policy Development</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="#"><i class="fab fa-linkedin"></i> LinkedIn</a
+          ><a href="#"><i class="fas fa-envelope"></i> Email Us</a
+          ><a href="#"><i class="fas fa-phone-alt"></i> (888) 554-1234</a>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>
+          © 2026 Bastion Safety Consulting. All Rights Reserved. | Building
+          Safer Workplaces
+        </p>
+      </div>
+    </footer>
+
+    <script>
+      const mobileBtn = document.getElementById("mobileMenuBtn");
+      const navLinks = document.getElementById("navLinks");
+      mobileBtn.addEventListener("click", () => {
+        navLinks.classList.toggle("mobile-open");
+      });
+      document
+        .querySelectorAll(".nav-links a, .btn-primary, .btn-outline-light")
+        .forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            if (
+              this.getAttribute("href") &&
+              this.getAttribute("href").startsWith("#")
+            ) {
+              e.preventDefault();
+              const targetId = this.getAttribute("href").substring(1);
+              const target =
+                document.getElementById(targetId) ||
+                document.querySelector(`[name="${targetId}"]`);
+              if (target)
+                target.scrollIntoView({ behavior: "smooth", block: "start" });
+              if (navLinks.classList.contains("mobile-open"))
+                navLinks.classList.remove("mobile-open");
+            }
+          });
+        });
+      document
+        .getElementById("scrollToForm")
+        ?.addEventListener("click", (e) => {
+          e.preventDefault();
+          document
+            .getElementById("contact-form")
+            ?.scrollIntoView({ behavior: "smooth", block: "center" });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,529 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bastion Safety Consulting | Workplace Safety Experts</title>
+    <meta name="description" content="Bastion Safety Consulting provides professional workplace safety training, audits, inspections, risk assessments, and compliance solutions based on real-world field experience.">
+    <meta name="keywords" content="Safety Consulting, Workplace Safety Training, OSHA Safety Training, Safety Audits, Workplace Inspections, Risk Assessments, Industrial Safety Consulting, Construction Safety Training">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0D1B2A;
+            color: #e0e4e8;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0D1B2A;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #FF7A00;
+            border-radius: 5px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e06e00;
+        }
+
+        /* Typography */
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffffff, #FF7A00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .section-subtitle {
+            color: #FF7A00;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-weight: 600;
+            font-size: 0.85rem;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Glassmorphism & Cards */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            transition: all 0.4s ease;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(255, 122, 0, 0.3);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Buttons */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, #FF7A00, #e06e00);
+            color: white;
+            border: none;
+            padding: 14px 32px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px -5px rgba(255, 122, 0, 0.4);
+            color: white;
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            border: 2px solid #FF7A00;
+            color: #FF7A00;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .btn-outline-custom:hover {
+            background: #FF7A00;
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(13, 27, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            transition: all 0.3s;
+        }
+
+        .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.8rem;
+            background: linear-gradient(135deg, #fff, #FF7A00);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .nav-link {
+            color: #e0e4e8 !important;
+            font-weight: 500;
+            margin: 0 0.5rem;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #FF7A00 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 90vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: radial-gradient(circle at 10% 20%, rgba(255, 122, 0, 0.08), #0D1B2A 80%);
+            overflow: hidden;
+        }
+
+        .hero-badge {
+            background: rgba(255, 122, 0, 0.2);
+            backdrop-filter: blur(4px);
+            padding: 8px 18px;
+            border-radius: 40px;
+            display: inline-block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: #FF7A00;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Section */
+        .stat-card {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #FF7A00;
+        }
+
+        /* Process Timeline */
+        .process-step {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .process-step::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 3px;
+            height: 100%;
+            background: linear-gradient(to bottom, #FF7A00, transparent);
+        }
+
+        /* Testimonial */
+        .testimonial-card {
+            background: rgba(255, 255, 255, 0.04);
+            border-radius: 24px;
+            padding: 2rem;
+            margin: 1rem;
+            border: 1px solid rgba(255, 122, 0, 0.2);
+        }
+
+        /* Industry Tags */
+        .industry-tag {
+            background: rgba(255, 122, 0, 0.1);
+            border: 1px solid rgba(255, 122, 0, 0.3);
+            padding: 10px 24px;
+            border-radius: 40px;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+
+        .industry-tag:hover {
+            background: rgba(255, 122, 0, 0.3);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
+        .footer {
+            background: #07121f;
+            border-top: 1px solid rgba(255, 122, 0, 0.2);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 2rem;
+            }
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">BASTION<span style="color:#FF7A00;">⚡</span>SAFETY</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" style="background:#FF7A00;">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#process">Process</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#industries">Industries</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="hero-badge"><i class="fas fa-shield-alt me-2"></i>Real-World Field Experience</div>
+                    <h1 class="display-3 fw-bold mb-4">Building Safer Workplaces Through <span style="color:#FF7A00;">Real-World Experience</span></h1>
+                    <p class="lead mb-4" style="color:#b0b8c5;">Professional safety consulting and training solutions designed to educate employees, reduce workplace risks, and strengthen safety culture through practical field knowledge.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn-primary-custom"><i class="fas fa-arrow-right"></i> Get Started</a>
+                        <a href="#services" class="btn-outline-custom"><i class="fas fa-calendar-alt"></i> Schedule a Consultation</a>
+                        <a href="#services" class="btn-outline-custom"><i class="fas fa-chalkboard-user"></i> Request Training</a>
+                    </div>
+                    <p class="mt-4 small" style="color:#8a94a3;"><i class="fas fa-check-circle text-warning me-2"></i>At Bastion Safety Consulting, we provide modern safety consulting, inspections, audits, and hands-on training programs tailored to companies and individuals across the Rocky Mountain region.</p>
+                </div>
+                <div class="col-lg-5 mt-5 mt-lg-0" data-aos="fade-left">
+                    <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=600&auto=format" alt="Safety Professional" class="img-fluid rounded-4 shadow-lg" style="border: 1px solid rgba(255,122,0,0.3);">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5" style="background: #0a1525;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                    <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=600&auto=format" alt="Safety Team Meeting" class="img-fluid rounded-4 shadow-lg">
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <span class="section-subtitle"><i class="fas fa-helmet-safety me-2"></i> About Us</span>
+                    <h2 class="section-title">About Bastion Safety Consulting</h2>
+                    <p class="mb-3">Bastion Safety Consulting was founded with one mission — helping businesses create safer, stronger, and more knowledgeable workplaces.</p>
+                    <p class="mb-3">We believe safety training should go beyond presentations and paperwork. Our approach combines real-world field experience with modern training methods to ensure employees fully understand workplace hazards, compliance requirements, and safe work practices.</p>
+                    <p class="mb-4">From safety audits and inspections to customized training programs and risk assessments, we help companies build confidence, reduce incidents, and maintain compliance with current federal and state safety standards.</p>
+                    <div class="row g-3">
+                        <div class="col-6"><i class="fas fa-check-circle text-warning me-2"></i> Real Field Experience</div>
+                        <div class="col-6"><i class="fas fa-check-circle text-warning me-2"></i> Up-to-Date Safety Standards</div>
+                        <div class="col-6"><i class="fas fa-check-circle text-warning me-2"></i> Customized Training Programs</div>
+                        <div class="col-6"><i class="fas fa-check-circle text-warning me-2"></i> Professional Risk Assessments</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle"><i class="fas fa-tools me-2"></i> What We Offer</span>
+                <h2 class="section-title">Our Safety Services</h2>
+                <p class="mx-auto" style="max-width: 700px; color:#b0b8c5;">We provide comprehensive workplace safety solutions designed to educate employees, reduce risk, and strengthen organizational safety culture.</p>
+            </div>
+            <div class="row g-4">
+                <!-- Service 1 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-chalkboard-user fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Professional Safety Training</h3>
+                        <p>Interactive in-person and video-based safety training programs designed to improve employee knowledge, workplace awareness, and compliance.</p>
+                        <div class="mt-3"><small><i class="fas fa-tag me-1"></i> OSHA-Based · Hazard Awareness · Emergency Response</small></div>
+                    </div>
+                </div>
+                <!-- Service 2 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-clipboard-list fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Safety Audits & Compliance Reviews</h3>
+                        <p>Detailed workplace audits that identify safety gaps, improve compliance, and help companies create safer working environments.</p>
+                        <div class="mt-3"><small><i class="fas fa-tag me-1"></i> Workplace Evaluations · Hazard ID · Action Plans</small></div>
+                    </div>
+                </div>
+                <!-- Service 3 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-search-location fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Workplace Inspections</h3>
+                        <p>Professional inspections designed to identify risks, improve safety performance, and ensure safe operational practices.</p>
+                        <div class="mt-3"><small><i class="fas fa-tag me-1"></i> Site Evaluations · PPE Checks · Equipment Inspections</small></div>
+                    </div>
+                </div>
+                <!-- Service 4 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-chart-line fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Risk Assessment & Analysis</h3>
+                        <p>Comprehensive risk analysis solutions that help businesses identify, evaluate, and reduce workplace hazards before incidents occur.</p>
+                        <div class="mt-3"><small><i class="fas fa-tag me-1"></i> Hazard Assessments · Prevention Strategies</small></div>
+                    </div>
+                </div>
+                <!-- Service 5 -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-file-alt fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Safety Policy Development</h3>
+                        <p>Creation and review of customized safety policies designed to align with industry standards and operational requirements.</p>
+                        <div class="mt-3"><small><i class="fas fa-tag me-1"></i> Safety Manuals · Compliance Updates · Documentation</small></div>
+                    </div>
+                </div>
+                <!-- Service 6 extra -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="glass-card p-4 h-100">
+                        <div class="mb-3"><i class="fas fa-users fa-3x" style="color:#FF7A00;"></i></div>
+                        <h3 class="h4 mb-3">Consulting & Support</h3>
+                        <p>Ongoing safety consulting services to maintain compliance, update procedures, and continuously improve workplace safety culture.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-us" style="background: #0a1525;">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-subtitle"><i class="fas fa-star-of-life me-2"></i> Why Choose Us</span>
+                    <h2 class="section-title">Why Companies Choose Bastion Safety Consulting</h2>
+                    <p>We understand that effective safety training requires more than basic instruction. Our experience-based approach helps employees gain practical understanding, confidence, and long-term safety awareness.</p>
+                    <div class="row mt-4 g-3">
+                        <div class="col-6"><i class="fas fa-hard-hat text-warning me-2"></i> Real-World Experience</div>
+                        <div class="col-6"><i class="fas fa-graduation-cap text-warning me-2"></i> Modern Training Approaches</div>
+                        <div class="col-6"><i class="fas fa-balance-scale text-warning me-2"></i> Reliable Compliance Guidance</div>
+                        <div class="col-6"><i class="fas fa-handshake text-warning me-2"></i> Strong Focus on Education</div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <div class="glass-card p-4">
+                        <div class="stat-card mb-3"><i class="fas fa-user-shield fa-2x text-warning mb-2"></i><h3>100% Safety-Focused Approach</h3></div>
+                        <div class="stat-card mb-3"><i class="fas fa-mountain fa-2x text-warning mb-2"></i><h3>Real Field-Based Knowledge</h3></div>
+                        <div class="stat-card"><i class="fas fa-laptop-code fa-2x text-warning mb-2"></i><h3>Modern Training Solutions</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-5">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle"><i class="fas fa-diagram-project me-2"></i> Methodology</span>
+                <h2 class="section-title">Our Process</h2>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100"><div class="glass-card p-4 text-center h-100"><div class="display-1 fw-bold text-warning">01</div><h4 class="mt-3">Consultation & Evaluation</h4><p>We begin by understanding your workplace, operations, and safety requirements.</p></div></div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200"><div class="glass-card p-4 text-center h-100"><div class="display-1 fw-bold text-warning">02</div><h4 class="mt-3">Assessment & Planning</h4><p>We identify hazards, review current procedures, and develop tailored recommendations.</p></div></div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300"><div class="glass-card p-4 text-center h-100"><div class="display-1 fw-bold text-warning">03</div><h4 class="mt-3">Training & Implementation</h4><p>We deliver practical training and implement effective safety solutions.</p></div></div>
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="400"><div class="glass-card p-4 text-center h-100"><div class="display-1 fw-bold text-warning">04</div><h4 class="mt-3">Ongoing Support</h4><p>We continue supporting your organization with guidance, updates, and improvements.</p></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries Section -->
+    <section id="industries" style="background: #0a1525;">
+        <div class="container py-5">
+            <div class="text-center mb-5" data-aos="fade-up">
+                <span class="section-subtitle"><i class="fas fa-industry me-2"></i> Expertise Areas</span>
+                <h2 class="section-title">Industries We Serve</h2>
+            </div>
+            <div class="d-flex flex-wrap justify-content-center gap-3">
+                <span class="industry-tag">Construction</span><span class="industry-tag">Manufacturing</span><span class="industry-tag">Industrial Facilities</span>
+                <span class="industry-tag">Warehousing & Logistics</span><span class="industry-tag">Contractors</span><span class="industry-tag">Energy & Utilities</span>
+                <span class="industry-tag">Transportation</span><span class="industry-tag">Small Businesses</span><span class="industry-tag">Individual Professionals</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-5">
+        <div class="container py-4">
+            <div class="text-center mb-5" data-aos="fade-up"><span class="section-subtitle">Testimonials</span><h2 class="section-title">What Clients Say</h2></div>
+            <div class="row g-4">
+                <div class="col-md-4" data-aos="fade-up"><div class="testimonial-card"><i class="fas fa-quote-left fa-2x text-warning mb-3"></i><p>“Bastion Safety Consulting provided detailed training that was practical, engaging, and easy for our employees to understand. Their field experience truly made the difference.”</p><h5 class="mt-3">— Project Manager, Denver Construction</h5></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100"><div class="testimonial-card"><i class="fas fa-quote-left fa-2x text-warning mb-3"></i><p>“Their inspection and audit process helped us identify critical safety gaps and improve workplace compliance quickly.”</p><h5 class="mt-3">— EHS Director, Manufacturing Co.</h5></div></div>
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200"><div class="testimonial-card"><i class="fas fa-quote-left fa-2x text-warning mb-3"></i><p>“Professional, knowledgeable, and extremely thorough. Our team gained confidence and a better understanding of workplace safety.”</p><h5 class="mt-3">— Safety Manager, Logistics Firm</h5></div></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section style="background: linear-gradient(135deg, #FF7A00, #e06e00);" class="py-5">
+        <div class="container py-5 text-center">
+            <h2 class="display-5 fw-bold text-white mb-3" data-aos="zoom-in">Ready to Strengthen Your Workplace Safety?</h2>
+            <p class="lead text-white mb-4" data-aos="fade-up">Partner with Bastion Safety Consulting to build safer work environments through practical training, detailed assessments, and professional consulting solutions.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap" data-aos="fade-up">
+                <a href="#contact" class="btn-primary-custom" style="background: #0D1B2A; color:white;">Contact Us Today <i class="fas fa-arrow-right"></i></a>
+                <a href="#services" class="btn-outline-custom" style="border-color:white; color:white;">Request a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <span class="section-subtitle"><i class="fas fa-envelope me-2"></i> Get In Touch</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p>Have questions about training, audits, inspections, or safety consulting services? Contact Bastion Safety Consulting today to discuss your workplace safety goals.</p>
+                    <div class="mt-4">
+                        <div class="d-flex align-items-center mb-3"><i class="fas fa-phone-alt fa-fw text-warning fa-lg me-3"></i> <span>(303) 555-0123</span></div>
+                        <div class="d-flex align-items-center mb-3"><i class="fas fa-envelope fa-fw text-warning fa-lg me-3"></i> <span>hello@bastionsafety.com</span></div>
+                        <div class="d-flex align-items-center mb-3"><i class="fas fa-map-marker-alt fa-fw text-warning fa-lg me-3"></i> <span>Rocky Mountain Region, CO</span></div>
+                        <div class="d-flex align-items-center"><i class="fab fa-linkedin fa-fw text-warning fa-lg me-3"></i> <span>/company/bastion-safety</span></div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-4 mt-lg-0" data-aos="fade-left">
+                    <div class="glass-card p-4">
+                        <form id="contactForm">
+                            <div class="mb-3"><input type="text" class="form-control bg-dark text-white border-0 p-3" placeholder="Your Name" required></div>
+                            <div class="mb-3"><input type="email" class="form-control bg-dark text-white border-0 p-3" placeholder="Email Address" required></div>
+                            <div class="mb-3"><textarea rows="4" class="form-control bg-dark text-white border-0 p-3" placeholder="Tell us about your safety needs..."></textarea></div>
+                            <button type="submit" class="btn-primary-custom w-100 justify-content-center">Send Message <i class="fas fa-paper-plane ms-2"></i></button>
+                            <div id="formMsg" class="mt-3 text-success small"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer pt-5 pb-3">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4"><h4 class="fw-bold mb-3">BASTION<span style="color:#FF7A00;">⚡</span>SAFETY</h4><p>Providing professional safety consulting and training solutions focused on education, compliance, and real-world workplace safety.</p></div>
+                <div class="col-md-2"><h5 class="text-warning">Links</h5><ul class="list-unstyled"><li><a href="#home" class="text-decoration-none text-light-emphasis">Home</a></li><li><a href="#about" class="text-decoration-none text-light-emphasis">About</a></li><li><a href="#services" class="text-decoration-none text-light-emphasis">Services</a></li><li><a href="#industries" class="text-decoration-none text-light-emphasis">Industries</a></li></ul></div>
+                <div class="col-md-3"><h5 class="text-warning">Services</h5><ul class="list-unstyled"><li>Safety Training</li><li>Audits & Inspections</li><li>Risk Assessments</li><li>Policy Development</li></ul></div>
+                <div class="col-md-3"><h5 class="text-warning">Connect</h5><div class="d-flex gap-3"><i class="fab fa-linkedin fa-2x" style="color:#FF7A00;"></i><i class="fab fa-twitter fa-2x" style="color:#FF7A00;"></i></div></div>
+            </div>
+            <hr class="mt-4" style="border-color:#FF7A00;">
+            <div class="text-center py-3 small">© 2026 Bastion Safety Consulting. All Rights Reserved. | Building Safer Workplaces</div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, once: true });
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            document.getElementById('formMsg').innerHTML = '<i class="fas fa-check-circle"></i> Thank you! We\'ll respond within 24 hours.';
+            this.reset();
+            setTimeout(() => document.getElementById('formMsg').innerHTML = '', 4000);
+        });
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
+            });
+        });
+    </script>
+</body>
+</html>
